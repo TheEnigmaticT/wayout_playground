@@ -47,11 +47,13 @@ $small-font-color: scale-color($header-font-color, $lightness: 35%) !default;
 $paragraph-font-family: inherit !default;
 $paragraph-font-weight: $font-weight-normal !default;
 $paragraph-font-size: 1rem !default;
-$paragraph-line-height: 1.6 !default;
+$paragraph-line-height: 2 !default;
 $paragraph-margin-bottom: rem-calc(20) !default;
 $paragraph-aside-font-size: rem-calc(14) !default;
 $paragraph-aside-line-height: 1.35 !default;
 $paragraph-aside-font-style: italic !default;
+$paragraph-intro-font-size: rem-calc(16) !default;
+$paragraph-intro-line-height: 2.7 !default;
 $paragraph-text-rendering: optimizeLegibility !default;
 
 // We use these to style <code> tags
@@ -66,7 +68,7 @@ $code-padding: rem-calc(2) rem-calc(5) rem-calc(1) !default;
 
 // We use these to style anchors
 $anchor-text-decoration: none !default;
-$anchor-text-decoration-hover: none !default;
+$anchor-text-decoration-hover: underline !default;
 $anchor-font-color: $primary-color !default;
 $anchor-font-color-hover: scale-color($anchor-font-color, $lightness: -14%) !default;
 
@@ -241,11 +243,15 @@ $align-class-breakpoints:
 
       &.lead { @include lead; }
 
-      & aside {
+      &.aside {
         font-size: $paragraph-aside-font-size;
         line-height: $paragraph-aside-line-height;
         font-style: $paragraph-aside-font-style;
       }
+     &.intro {
+        font-size: $paragraph-intro-font-size;
+        line-height: $paragraph-intro-line-height;
+     }
     }
 
     /* Default header styles */
